@@ -8,3 +8,9 @@
 
 import { createPrompt } from 'bun-promptx'
 
+const gridSize = 10
+const numMugwumps = 4
+const maxTries = 10
+// const mugwumps = new Array (numMugwumps)
+
+console.log('
