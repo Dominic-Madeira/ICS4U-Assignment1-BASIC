@@ -37,7 +37,7 @@ public class MUGWUMP {
             tries++;
             System.out.println();
             System.out.println("TURN NO. " + tries + " WHAT IS YOUR GUESS?");
-            int xCoordinate = scanner.nextInt();
+            int xCoordinte = scanner.nextInt();
             int yCoordinate = scanner.nextInt();
 
             boolean foundAll = true; // Initialize to true at the start of each turn
