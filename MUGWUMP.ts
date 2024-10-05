@@ -75,7 +75,13 @@ function playGame() {
 
 function placeMugwumps() {
     for (let counter = 0; counter < numMugwumps; counter++) {
-        mugwumps[counter][0] = Math.floor(Math.random() * gridSize)
-        mugwumps[counter][1] = Math.floor(Math.random() * gridSize)
+        console.log(`gridSize: ${gridSize}, counter: ${counter}`);
+
+mugwumps[counter][0] = Math.floor(Math.random() * gridSize);
+mugwumps[counter][1] = Math.floor(Math.random() * gridSize);
+
+console.log(`mugwumps[${counter}][0]: ${mugwumps[counter][0]}, mugwumps[${counter}][1]: ${mugwumps[counter][1]}`);
+        // mugwumps[counter][0] = Math.floor(Math.random() * gridSize)
+        // mugwumps[counter][1] = Math.floor(Math.random() * gridSize)
     }
 }
