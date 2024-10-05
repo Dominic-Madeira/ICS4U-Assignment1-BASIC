@@ -47,18 +47,10 @@
 600 PRINT "THAT WAS FUN! LET'S PLAY AGAIN...."
 610 PRINT "FOUR MORE MUGWUMPS ARE NOW IN HIDING."
 630 GOTO 240
-1000 P(1,1) = 3
-1010 P(1,2) = 7
-1011 P(1,1) = 6
-1012 P(1,2) = 1
-1013 P(1,1) = 5
-1022 P(1,2) = 5
-1023 P(1,1) = 8
-1033 P(1,2) = 9
-'1000 FOR I=1 TO 4
-'1010   P(I,1) = INT(10 * RND)  ' Generate random X coordinate
-'1020   P(I,2) = INT(10 * RND)  ' Generate random Y coordinate
-'1030 NEXT I
+1000 FOR I=1 TO 4
+1010   P(I,1) = INT(10 * RND)  ' Generate random X coordinate
+1020   P(I,2) = INT(10 * RND)  ' Generate random Y coordinate
+1030 NEXT I
 REM LINES 1000-1030 WERE CHANGED FROM INITIAL VERSION:
 REM 1000 FOR J=1 TO 2
 REM 1010 FOR I=1 TO 4
