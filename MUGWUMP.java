@@ -6,7 +6,7 @@ public class MUGWUMP {
     private static final int gridSize = 10;
     private static final int numMugwumps = 4;
     private static final int maxTries = 10;
-    private static int[][] mugwumps = new int[numMugwumps][2]; // create an array to store the mugwumps
+    private static int[][] mugwumps = new int[numMugwumps][2];
     private static Random random = new Random();
     private static Scanner scanner = new Scanner(System.in);
 
