@@ -38,8 +38,8 @@ function playGame() {
         tries++
         console.log()
         console.log(`TURN NO. ${tries} WHAT IS YOUR GUESS?`)
-        let xCoordinate = createPrompt('WHAT IS THE X COORDINATE?')
-        let yCoordinate = createPrompt('WHAT IS THE Y COORDINATE?')
+        let xCoordinate = createPrompt('WHAT IS THE X COORDINATE? ')
+        let yCoordinate = createPrompt('WHAT IS THE Y COORDINATE? ')
 
         let foundAll = true
 
