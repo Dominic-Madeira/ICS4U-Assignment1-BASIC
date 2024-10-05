@@ -51,6 +51,10 @@ function playGame() {
                 mugwumps[counter][0] = -1
                 console.log(`YOU HAVE FOUND MUGWUMP ${counter + 1}`)
             } else {
+                console.log(mugwumps[counter][0])
+                console.log(xCoordinate)
+                console.log(mugwumps[counter][1])
+                console.log(yCoordinate)
                 let distance = Math.sqrt(Math.pow(mugwumps[counter][0] - xCoordinate, 2) + Math.pow(mugwumps[counter][1] - yCoordinate, 2))
                 console.log(distance)
                 console.log(`YOU ARE ${distance.toFixed(1)} UNITS FROM MUGWUMP ${counter + 1}`)
