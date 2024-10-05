@@ -52,6 +52,7 @@ function playGame() {
                 console.log(`YOU HAVE FOUND MUGWUMP ${counter + 1}`)
             } else {
                 let distance = Math.sqrt(Math.pow(mugwumps[counter][0] - xCoordinate, 2) + Math.pow(mugwumps[counter][1] - yCoordinate, 2))
+                console.log(distance)
                 console.log(`YOU ARE ${distance.toFixed(1)} UNITS FROM MUGWUMP ${counter + 1}`)
                 foundAll = false
             }
@@ -75,13 +76,7 @@ function playGame() {
 
 function placeMugwumps() {
     for (let counter = 0; counter < numMugwumps; counter++) {
-        console.log(`gridSize: ${gridSize}, counter: ${counter}`);
-
-mugwumps[counter][0] = Math.floor(Math.random() * gridSize);
-mugwumps[counter][1] = Math.floor(Math.random() * gridSize);
-
-console.log(`mugwumps[${counter}][0]: ${mugwumps[counter][0]}, mugwumps[${counter}][1]: ${mugwumps[counter][1]}`);
-        // mugwumps[counter][0] = Math.floor(Math.random() * gridSize)
-        // mugwumps[counter][1] = Math.floor(Math.random() * gridSize)
+        mugwumps[counter][0] = Math.floor(Math.random() * gridSize);
+        mugwumps[counter][1] = Math.floor(Math.random() * gridSize);
     }
 }
