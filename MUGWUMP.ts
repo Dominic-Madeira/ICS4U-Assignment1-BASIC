@@ -76,8 +76,16 @@ function playGame (): void {
 }
 
 function placeMugwumps (): void {
-  for (let counter = 0; counter < numMugwumps; counter++) {
-    mugwumps[counter][0] = Math.floor(Math.random() * gridSize)
-    mugwumps[counter][1] = Math.floor(Math.random() * gridSize)
-  }
+  mugwumps[0][0] = 3
+  mugwumps[0][1] = 7
+  mugwumps[1][0] = 6
+  mugwumps[1][1] = 1
+  mugwumps[2][0] = 5
+  mugwumps[2][1] = 5
+  mugwumps[3][0] = 8
+  mugwumps[3][1] = 9
+  // for (let counter = 0; counter < numMugwumps; counter++) {
+  //   mugwumps[counter][0] = Math.floor(Math.random() * gridSize)
+  //   mugwumps[counter][1] = Math.floor(Math.random() * gridSize)
+  // }
 }
