@@ -45,7 +45,7 @@ public class MUGWUMP {
 
   /**
    * This is the main function.
-   * 
+   *
    * @param args No args used
    */
     public static void main(String[] args) {
@@ -89,7 +89,7 @@ public class MUGWUMP {
             boolean foundAll = true; // Set to true at the start of each turn
 
             for (int counter = 0; counter < NUM_MUGWUMPS; counter++) {
-                if (mugwumps[counter][0] == -1) continue; // Skip already found
+                if (mugwumps[counter][0] == -1) { continue }; // Skip found
                 if (
                     mugwumps[counter][0] == xCoordinate
                     && mugwumps[counter][1] == yCoordinate
@@ -109,7 +109,7 @@ public class MUGWUMP {
                                             )
                                     );
                     System.out.printf(
-                                    "YOU ARE %.1f UNITS FROM MUGWUMP" 
+                                    "YOU ARE %.1f UNITS FROM MUGWUMP"
                                     + " %d%n", distance, counter + 1
                                     );
                     foundAll = false; // Set to false if a Mugwump is not found
@@ -131,7 +131,7 @@ public class MUGWUMP {
         for (int counter = 0; counter < NUM_MUGWUMPS; counter++) {
             if (mugwumps[counter][0] != -1) {
                 System.out.printf(
-                                "MUGWUMP " + (counter + 1) 
+                                "MUGWUMP " + (counter + 1)
                                 + " IS AT (" + mugwumps[counter][0] + ","
                                 + mugwumps[counter][1] + "); "
                                 );
