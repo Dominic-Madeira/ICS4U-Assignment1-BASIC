@@ -16,22 +16,22 @@ public class MUGWUMP {
     /**
      * This dictates the size of the playing field.
      */
-    private static final int gridSize = 10;
+    private static final int GRID_SIZE = 10;
 
     /**
      * This dictates how many Mugwumps are spawned in.
      */
-    private static final int numMugwumps = 4;
+    private static final int NUM_MUGWUMPS = 4;
 
     /**
      * This dictates the max amount of tries given.
      */
-    private static final int maxTries = 10;
+    private static final int MAX_TRIES = 10;
 
     /**
      * This creates an array for the coordinates of the mugwumps.
      */
-    private static int[][] mugwumps = new int[numMugwumps][2];
+    private static int[][] mugwumps = new int[NUM_MUGWUMPS][2];
 
     /**
      * This is used to generate random numbers for the mugwump coordiantes.
@@ -45,6 +45,8 @@ public class MUGWUMP {
 
   /**
    * This is the main function.
+   * 
+   * @param args No args used
    */
     public static void main(String[] args) {
         System.out.println("THE OBJECT OF THIS GAME IS TO FIND FOUR MUGWUMPS");
@@ -77,7 +79,7 @@ public class MUGWUMP {
         placeMugwumps();
         int tries = 0;
 
-        while (tries < maxTries) {
+        while (tries < MAX_TRIES) {
             tries++;
             System.out.println();
             System.out.println("TURN NO. " + tries + " WHAT IS YOUR GUESS?");
@@ -86,12 +88,12 @@ public class MUGWUMP {
 
             boolean foundAll = true; // Set to true at the start of each turn
 
-            for (int counter = 0; counter < numMugwumps; counter++) {
+            for (int counter = 0; counter < NUM_MUGWUMPS; counter++) {
                 if (mugwumps[counter][0] == -1) continue; // Skip already found
                 if (
-                        mugwumps[counter][0] == xCoordinate
-                        && mugwumps[counter][1] == yCoordinate
-                   ) {
+                    mugwumps[counter][0] == xCoordinate
+                    && mugwumps[counter][1] == yCoordinate
+                ) {
                     mugwumps[counter][0] = -1; // Mark Mugwump as found
                     System.out.println(
                                     "YOU HAVE FOUND MUGWUMP " + (counter + 1)
@@ -126,7 +128,7 @@ public class MUGWUMP {
                         "SORRY, THAT'S 10 TRIES."
                         + " HERE IS WHERE THEY'RE HIDING:"
                         );
-        for (int counter = 0; counter < numMugwumps; counter++) {
+        for (int counter = 0; counter < NUM_MUGWUMPS; counter++) {
             if (mugwumps[counter][0] != -1) {
                 System.out.printf(
                                 "MUGWUMP " + (counter + 1) 
@@ -141,9 +143,9 @@ public class MUGWUMP {
      * This places the Mugwumps for the user to find.
      */
     private static void placeMugwumps() {
-        for (int counter = 0; counter < numMugwumps; counter++) {
-            mugwumps[counter][0] = random.nextInt(gridSize);
-            mugwumps[counter][1] = random.nextInt(gridSize);
+        for (int counter = 0; counter < NUM_MUGWUMPS; counter++) {
+            mugwumps[counter][0] = random.nextInt(GRID_SIZE);
+            mugwumps[counter][1] = random.nextInt(GRID_SIZE);
         }
     }
 }
